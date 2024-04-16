@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import styles from './ContactForm.module.css';
+import propTypes from 'prop-types';
 
 class ContactForm extends Component {
   state = {
@@ -30,7 +31,7 @@ class ContactForm extends Component {
           name="name"
           value={name}
           onChange={this.handleChange}
-          // pattern="^[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*$"
+          pattern="^[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
@@ -51,5 +52,9 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  handleNewContact: propTypes.func,
+};
 
 export default ContactForm;

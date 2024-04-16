@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import styles from './ContactListItem.module.css';
+import propTypes, { number } from 'prop-types';
 
 class ContactListItem extends Component {
   render() {
@@ -20,5 +21,12 @@ class ContactListItem extends Component {
     );
   }
 }
+
+ContactListItem.propTypes = {
+  id: propTypes.string,
+  name: propTypes.string,
+  number: propTypes.string,
+  deleteContact: propTypes.func,
+};
 
 export default ContactListItem;

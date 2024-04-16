@@ -2,6 +2,8 @@ import { Component } from 'react';
 import ContactListItem from '../ContactListItem/ContactListItem';
 import { nanoid } from 'nanoid';
 import styles from './ContactList.module.css';
+import propTypes from 'prop-types';
+
 class ContactList extends Component {
   render() {
     const { contacts, deleteContact } = this.props;
@@ -22,5 +24,10 @@ class ContactList extends Component {
     );
   }
 }
+
+ContactList.propTypes = {
+  contacts: propTypes.array,
+  deleteContact: propTypes.func,
+};
 
 export default ContactList;
