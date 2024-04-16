@@ -51,6 +51,7 @@ export class App extends Component {
     return (
       <>
         <h1>Phonebook</h1>
+
         <ContactForm
           contacts={contacts}
           handleNewContact={this.handleNewContact}
