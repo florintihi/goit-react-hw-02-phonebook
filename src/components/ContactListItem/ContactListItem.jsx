@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import styles from './ContactListItem.module.css';
-import propTypes, { number } from 'prop-types';
+import propTypes from 'prop-types';
 
 class ContactListItem extends Component {
   render() {
